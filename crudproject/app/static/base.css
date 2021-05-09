@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Garamond, serif;
+    color: #898989;
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}

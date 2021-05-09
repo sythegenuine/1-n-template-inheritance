@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png"
+        href="https://user-images.githubusercontent.com/46775877/116785680-cda79500-aad5-11eb-9894-c98b45d084b4.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이소영짱</title>
+</head>
+
+<body>
+    <div class="title">
+        Home.
+    </div>
+    <div class="container">
+        <div class="posts-container">
+            {% for post in posts %}
+            <a href="{% url 'detail' post.pk %}">
+                <div class="post-wrapper">
+                    <div class="post-title">
+                        {{post.title}}
+                    </div>
+                    <div class="post-content">
+                        {{post.content}}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

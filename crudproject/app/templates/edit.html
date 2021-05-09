@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png"
+        href="https://user-images.githubusercontent.com/46775877/116778270-d5eada80-aaab-11eb-996a-bde963a2f6bd.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이소영짱</title>
+</head>
+
+<body>
+    <div class="title">
+        Edit.
+    </div>
+    <div class="container">
+        <div class="edit-post-container">
+            <form method="POST">
+                {% csrf_token %}
+                글 수정하기
+                <input type="text" value="{{ post.title }}" name="title">
+                <textarea name="content">{{ post.content }}</textarea>
+                <input id="edit-post-submit-btn" type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
